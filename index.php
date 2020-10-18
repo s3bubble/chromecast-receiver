@@ -17,7 +17,7 @@
 		playbackConfig.licenseUrl = 'https://widevine-dash.ezdrm.com/widevine-php/widevine-foreignkey.php?pX=CA6D8D';
 		playbackConfig.protectionSystem = cast.framework.ContentProtection.WIDEVINE;
 		playbackConfig.licenseRequestHandler = requestInfo => {
-		  requestInfo.withCredentials = true;
+		  requestInfo.withCredentials = false;
 		};
 		context.start({playbackConfig: playbackConfig});
 
