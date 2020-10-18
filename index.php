@@ -14,7 +14,7 @@
   		const context = cast.framework.CastReceiverContext.getInstance();
 		const playbackConfig = new cast.framework.PlaybackConfig();
 		// Customize the license url for playback
-		playbackConfig.licenseUrl = 'https://widevine-dash.ezdrm.com/widevine-php/widevine-foreignkey.php?pX=CA6D8D';
+		playbackConfig.licenseUrl = '';
 		playbackConfig.protectionSystem = cast.framework.ContentProtection.WIDEVINE;
 		playbackConfig.licenseRequestHandler = requestInfo => {
 		  requestInfo.withCredentials = false;
@@ -25,10 +25,9 @@
 		context.getPlayerManager().setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
 
 			console.log(loadRequest);
-		  if (loadRequest.media.customData && loadRequest.media.customData.licenseUrl) {
-		    playbackConfig.licenseUrl = loadRequest.media.customData.licenseUrl;
-		  }
-		  return playbackConfig;
+	
+		  	return playbackConfig;
+
 		});
 
   	</script>
