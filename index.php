@@ -22,12 +22,14 @@
 		context.start({playbackConfig: playbackConfig});
 
 		// Update playback config licenseUrl according to provided value in load request.
-		/*context.getPlayerManager().setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
+		context.getPlayerManager().setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
+
+			console.log(loadRequest);
 		  if (loadRequest.media.customData && loadRequest.media.customData.licenseUrl) {
 		    playbackConfig.licenseUrl = loadRequest.media.customData.licenseUrl;
 		  }
 		  return playbackConfig;
-		});*/
+		});
 
   	</script>
 </body>
