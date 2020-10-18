@@ -15,11 +15,6 @@
   		const context = cast.framework.CastReceiverContext.getInstance();
 		const playbackConfig = new cast.framework.PlaybackConfig();
 
-		playerManager.setMessageInterceptor(
-            cast.framework.messages.MessageType.LOAD, loadRequestData => {
-            console.log('loadRequestData', loadRequestData);
-        });
-
 
 		context.getPlayerManager().setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
 
